@@ -1,0 +1,47 @@
+{
+    "_version": "1.1.0",
+    "sap.app": {
+        "_version": "1.1.0",
+        "id": "customer.fin.gl.glview.display",
+        "type": "application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{{FULLSCREEN_TITLE_NEWII}}",
+        "sourceTemplate": {
+            "id": "generator-extensibilty-sub",
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "_version": "1.1.0",
+        "technology": "UI5",
+        "icons": { 
+            "icon": "sap-icon://Fiori5/F0706",
+            "favIcon": "./resources/sap/ca/ui/themes/base/img/favicon/F0706_Dsp_GL_Acc_Line_Items.ico"
+        },
+        "deviceTypes": { 
+            "desktop": true,
+            "tablet": true,
+            "phone": false
+        },
+        "supportedThemes": [
+          "sap_hcb",
+          "sap_bluecrystal"
+        ]
+    },
+    "sap.ui5": {
+        "_version": "1.1.0",
+         "dependencies": {
+            "minUI5Version": "1.114.0"
+        },
+        "extends": {
+            "component": "fin.co.glview.display.av1",
+            "extensions": {}
+        },           
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        }
+    }
+}

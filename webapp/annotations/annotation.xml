@@ -1,0 +1,52 @@
+<edmx:Edmx
+    xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx"
+    Version="4.0"
+>
+    <edmx:Reference
+        Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml"
+    >
+        <edmx:Include
+            Namespace="com.sap.vocabularies.Common.v1"
+            Alias="Common"
+        />
+    </edmx:Reference>
+    <edmx:Reference
+        Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml"
+    >
+        <edmx:Include
+            Namespace="com.sap.vocabularies.UI.v1"
+            Alias="UI"
+        />
+    </edmx:Reference>
+    <edmx:Reference
+        Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml"
+    >
+        <edmx:Include
+            Namespace="com.sap.vocabularies.Communication.v1"
+            Alias="Communication"
+        />
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/sap/FAC_GLV_GL_ACCOUNT_LINE_ITEMS_SRV/$metadata">
+        <edmx:Include
+                Namespace="FAC_GLV_GL_ACCOUNT_LINE_ITEMS_SRV"
+                Alias="SAP" />
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema
+                Namespace="local"
+                xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <Annotations Target="FAC_GLV_GL_ACCOUNT_LINE_ITEMS_SRV.C_JournalEntryItemBrowserResult">
+                <Annotation Term="UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>ControllingArea</PropertyPath>
+                        <PropertyPath>OrderID</PropertyPath>
+                        <PropertyPath>CostCenter</PropertyPath>
+                        <PropertyPath>WBSElement</PropertyPath>
+                        <PropertyPath>AccountingDocument</PropertyPath>
+                        <PropertyPath>ReferenceDocument</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
